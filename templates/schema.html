@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+      <title>Most Popular Baby Names by Sex and Mother's Ethnic Group, New York City</title>
+      <link rel="stylesheet" href="/pj03/static/style.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <header>
+    <title>Most Popular Baby Names by Sex and Mother's Ethnic Group, New York City</title>
+  </header>  
+  <body>
+    <p>This database has the most popular baby names in NYC from 2011 to 2016. </p>
+      <table>
+        <tr>
+        	<th>Field</th>
+        	<th>Type</th>
+        	<th>Description</th>
+        </tr>
+        <tr>
+        	<td>year_of_birth</td>
+        	<td>year(4)</td>
+        	<td>The year of the child's birth.</td>
+        </tr>
+        <tr>
+        	<td>gender</td>
+        	<td>varchar(6)</td>
+        	<td>The gender of the child.</td>
+        </tr>
+        <tr>
+        	<td>ethnicity</td>
+        	<td>tinytext</td>
+        	<td>The mother's ethinic background.</td>
+        </tr>
+        <tr>
+        	<td>first_name</td>
+        	<td>tinytext</td>
+        	<td>The child's first name.</td>
+        </tr>
+        <tr>
+        	<td>count</td>
+        	<td>smallint(6)</td>
+        	<td>Total number of children with name</td>
+        </tr>
+        <tr>
+        	<td>ranking</td>
+        	<td>tinyint(3) unsigned</td>
+        	<td>The rank of the given name</td>
+        </tr>
+      </table>
+      The schema can be found <a href="schema.sql">here</a><br>
+      <a href="/pj03">Go back to viewing the database.</a></p>
+  </body>
+</html>

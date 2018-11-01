@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Most Popular Baby Names by Sex and Mother's Ethnic Group, New York City</title>
+    <link rel="stylesheet" href="/pj03/static/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <h1>Most Popular Baby Names by Sex and Mother's Ethnic Group, New York City</h1>
+    <div class="table-container">
+      <table aria-describedby="summary">
+        <thead>
+          <tr>
+            <th>${year_of_birth}<a href="?col=year_of_birth&page=1">Year of Birth</a></th>
+        	  <th>${gender}<a href="?col=gender&page=1">Gender</a></th>
+        	  <th>${ethnicity}<a href="?col=ethnicity&page=1">Ethnicity</a></th>
+        	  <th>${first_name}<a href="?col=first_name&page=1">First Name</a></th>
+        	  <th>${count}<a href="?col=count&page=1">Count</a></th>
+        	  <th>${ranking}<a href="?col=ranking&page=1">Ranking</a></th>
+          </tr>
+        </thead>
+        <tbody>
+          % for president in presidents:
+          <tr>
+            <td>${president['year_of_birth']}</td>
+            <td>${president['gender']}</td>
+            <td>${president['ethnicity']}</td>
+            <td>${president['first_name']}</td>
+            <td>${president['count']}</td>
+            <td>${president['ranking']}</td>
+          </tr>
+          % endfor
+        </tbody>
+      </table>
+    </div>
+    <form action="" method="GET">
+      Page: <input type="text" name="page" required>
+      Sort by: 
+      <select name="col" required>
+      	<option value="year_of_birth" selected="selected">Year of Birth</option>
+      	<option value="gender">Gender</option>
+      	<option value="ethnicity">Ethnicity</option>
+      	<option value="first_name">First Name</option>
+      	<option value="count">Count</option>
+      	<option value="ranking">Ranking</option>
+      </select>
+      <br><br>
+      <input type="submit">
+    </form>
+    <br>
+    <code >${query | h}</code>
+    <footer>
+    <p>The most popular baby names by sex and mother's ethnicity in New York City. The relevent fields are the year the baby was born, the name, gender, ethnic group, the number of babys with that name, and its rank.</p>
+    <p>The schema can be found <a href="./static/schema.html">here</a></p>
+    <p>"Most Popular Baby Names by Sex and Mother's Ethnic Group, New York City." Datasets - Data.gov, Publisher Centers for Disease Control and Prevention, 12 Dec. 2013, catalog.data.gov/dataset/most-popular-baby-names-by-sex-and-mothers-ethnic-group-new-york-city-8c742.</p>
+    <p>The source for this data can be found <a href="https://catalog.data.gov/dataset/most-popular-baby-names-by-sex-and-mothers-ethnic-group-new-york-city-8c742"</a> right here </p></footer>
+  </body>
+</html>
